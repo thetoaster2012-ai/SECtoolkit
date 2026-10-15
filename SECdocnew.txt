@@ -1,0 +1,34 @@
+\n           inline newline
+`            tag
+//           comment
+
+X            end program
+?a           print text                  a:text
+$a           print variable              a:variable
+Na,b         new variable                a:target     b:value      (or Na,)
+Va,b         set variable                a:target     b:value
+Ca,b         get character               a:target     b:variable
+#a,b         random number               a:target     b:value      (0-value uninclusive)
+@a,b         random number               a:target     b:variable
++a,b         increment by                a:target     b:value
+-a,b         decrement by                a:target     b:value
+>`a          goto                       `a:tag
+]a           goto                        a:variable
+=a,b         skip if equal               a:variable   b:value
+Ea,b         skip if equal               a:variable   b:variable
+!a,b         skip if not equal           a:variable   b:value
+:a,b         skip if not equal           a:variable   b:variable
+W            clear screen
+Ia           user input                  a:target
+Ta           speak                       a:text
+Aa           speak                       a:variable
+Ba           boost                       a:value
+/a,b         command                     a:command    b:...
+
+/sfx,b       sound effect                b:value                   (0 - 7: open error close alert up down ex1 ex2)
+/button,b    get button state            b:target                  (-1 - 2: nothing < | >)
+/GET,b       print contents of website   b:uri
+/POST,b      post contents to website    b:uri                     (uses variable "post")
+/spr/sel,b   select or make new sprite   b:sprite name
+/spr/set,b   set sprite attributes       b:text                    ("idx,[x;y]")
+/spr/clr,   delete all sprites
