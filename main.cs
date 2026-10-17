@@ -71,7 +71,7 @@ for(int i=0; i<outprogram.Length; i++) //pass 2
     if(pi.StartsWith('>'))
     {
         Console.WriteLine("used label "+i);
-        string tag=pi[1..]; //fix
+        string tag=pi[2..]; //actually scratch that
         pi=pi.Replace("`"+tag,labels[tag].ToString());
     }
     outprogram[i]=pi;
